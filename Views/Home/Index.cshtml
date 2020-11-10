@@ -1,0 +1,31 @@
+﻿@model Tareaprogramacion.Models.Producto
+
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="text-center">
+    <div><h1 class="display-4">Registros de Productos</h1></div>
+
+    <form asp-controller="Home" asp-action="Almacenar">
+            <div class="form-group">
+                <label class="control-label">Nombre: </label>
+                <input asp-for="nombre" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Precio: </label>
+                <input asp-for="precio" class="form-control" type="number"/>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Descripción: </label>
+                <textarea asp-for="descripcion" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Almacenar"/>
+            </div>
+    </form>
+    
+</div>
